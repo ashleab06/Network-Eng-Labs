@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="OSPF Lecture" version="1" scripttimeout="300" countdown="0" linkwidth="2" lock="0" grid="1" sat="-1">
+  <topology>
+    <nodes>
+      <node id="3" name="R1" type="qemu" template="vios" image="vios-7.3.0" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="4" uuid="e6e0bb60-42e4-4629-84ca-d9bff229cf1a" firstmac="50:00:00:03:00:00" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.4.0" qemu_arch="x86_64" delay="0" sat="-1" icon="Router-2D-Gen-White-S.svg" config="0" left="570" top="48">
+        <interface id="0" name="Gi0/0" type="ethernet" network_id="2" vid="1" labelpos="0.5" stub="0" width="2" curviness="10" beziercurviness="150" round="0" midpoint="0.5" srcpos="0.15" dstpos="0.85"/>
+      </node>
+      <node id="4" name="R2" type="qemu" template="vios" image="vios-7.3.0" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="4" uuid="15b046b6-cdf2-401f-bb2a-2ed638681e67" firstmac="50:00:00:04:00:00" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.4.0" qemu_arch="x86_64" delay="0" sat="-1" icon="Router-2D-Gen-White-S.svg" config="0" left="960" top="48">
+        <interface id="0" name="Gi0/0" type="ethernet" network_id="2" vid="1" labelpos="0.5" stub="0" width="2" curviness="10" beziercurviness="150" round="0" midpoint="0.5" srcpos="0.15" dstpos="0.85"/>
+      </node>
+    </nodes>
+    <networks>
+      <network id="2" smart="0" vlan8021ad="0" type="bridge" name="Net-R2iface_0" left="957" top="493" style="Solid" linkstyle="Straight" color="" label="" visibility="0" icon="lan.png"/>
+    </networks>
+  </topology>
+  <objects>
+    <textobjects>
+      <textobject id="1" name="txt 1" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDEiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSBqdGstbWFuYWdlZCBqdGstZHJhZ2dhYmxlIGVkaXRhYmxlIHVpLXNlbGVjdGVlIHVpLXNlbGVjdGVkIGp0ay1kcmFnLXNlbGVjdGVkIGZyZWUtc2VsZWN0ZWQganRrLWRyYWcganRrLWRyYWdnZWQgZHJhZ3N0b3BwZWQiIGRhdGEtcGF0aD0iMSIgc3R5bGU9InBvc2l0aW9uOiBhYnNvbHV0ZTsgbGVmdDogNzI5cHg7IHRvcDogNDVweDsgei1pbmRleDogMTAwMTsgY3Vyc29yOiBtb3ZlOyBoZWlnaHQ6IGF1dG87IHdpZHRoOiBhdXRvOyIgY29udGVudGVkaXRhYmxlPSJ0cnVlIiBhcmlhLXJlYWRvbmx5PSJmYWxzZSI+PHA+MTcyLjE2LjI1NC4wLzI0PC9wPgo8L2Rpdj4=</data>
+      </textobject>
+      <textobject id="2" name="txt 2" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDIiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSBqdGstbWFuYWdlZCBqdGstZHJhZ2dhYmxlIGVkaXRhYmxlIGRyYWdzdG9wcGVkIHVpLXNlbGVjdGVlIHVpLXNlbGVjdGVkIGp0ay1kcmFnLXNlbGVjdGVkIGZyZWUtc2VsZWN0ZWQganRrLWRyYWcganRrLWRyYWdnZWQiIGRhdGEtcGF0aD0iMiIgc3R5bGU9InBvc2l0aW9uOiBhYnNvbHV0ZTsgbGVmdDogNjMwcHg7IHRvcDogNjBweDsgei1pbmRleDogMTAwMTsgY3Vyc29yOiBtb3ZlOyBoZWlnaHQ6IGF1dG87IHdpZHRoOiBhdXRvOyIgY29udGVudGVkaXRhYmxlPSJ0cnVlIiBhcmlhLXJlYWRvbmx5PSJmYWxzZSI+PHA+LjE8L3A+CjwvZGl2Pg==</data>
+      </textobject>
+      <textobject id="3" name="txt 3" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDMiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSBqdGstbWFuYWdlZCBqdGstZHJhZ2dhYmxlIGVkaXRhYmxlIHVpLXNlbGVjdGVlIGRyYWdzdG9wcGVkIHVpLXNlbGVjdGVkIGp0ay1kcmFnLXNlbGVjdGVkIGZyZWUtc2VsZWN0ZWQganRrLWRyYWcganRrLWRyYWdnZWQiIGRhdGEtcGF0aD0iMyIgc3R5bGU9InBvc2l0aW9uOiBhYnNvbHV0ZTsgbGVmdDogOTQycHg7IHRvcDogNjBweDsgei1pbmRleDogMTAwMTsgY3Vyc29yOiBtb3ZlOyBoZWlnaHQ6IGF1dG87IHdpZHRoOiBhdXRvOyIgY29udGVudGVkaXRhYmxlPSJ0cnVlIiBhcmlhLXJlYWRvbmx5PSJmYWxzZSI+PHA+LjI8L3A+CjwvZGl2Pg==</data>
+      </textobject>
+    </textobjects>
+  </objects>
+</lab>
